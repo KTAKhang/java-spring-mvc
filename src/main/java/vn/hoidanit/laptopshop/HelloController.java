@@ -7,7 +7,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/")
     public String index() {
-        return "Hello World With Khang!";
+        return "Hello World hahah!";
+    }
+
+    @GetMapping("/user")
+    public String userPage() {
+        return "Only User cant access this page";
+    }
+
+    @GetMapping("/admin")
+    public String adminPage() {
+        return "Only Admin cant access this page";
     }
 
 }
