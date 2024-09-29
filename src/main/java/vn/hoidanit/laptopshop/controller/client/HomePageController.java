@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomePageController {
     @GetMapping("/")
-    public String getMethodName() {
-        return new String();
+    public String getHomePage() {
+        return "client/homepage/show";
     }
 
 }
