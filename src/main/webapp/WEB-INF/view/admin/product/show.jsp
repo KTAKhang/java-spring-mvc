@@ -10,24 +10,21 @@
             <meta name="description" content="Hỏi Dân IT - Dự án laptopshop" />
             <meta name="author" content="Hỏi Dân IT" />
             <title>Dashboard - Hỏi Dân IT</title>
-            <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
             <link href="/css/styles.css" rel="stylesheet" />
             <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         </head>
 
         <body class="sb-nav-fixed">
-
             <jsp:include page="../layout/header.jsp" />
             <div id="layoutSidenav">
                 <jsp:include page="../layout/sidebar.jsp" />
                 <div id="layoutSidenav_content">
                     <main>
                         <div class="container-fluid px-4">
-                            <h1 class="mt-4">Manage Product</h1>
+                            <h1 class="mt-4">Manage Products</h1>
                             <ol class="breadcrumb mb-4">
                                 <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Products</li>
-
+                                <li class="breadcrumb-item active">Product</li>
                             </ol>
                             <div class="mt-5">
                                 <div class="row">
@@ -49,23 +46,23 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <!-- <c:forEach var="user" items="${users1}">
+                                                <c:forEach var="product" items="${products}">
                                                     <tr>
-                                                        <th>${user.id}</th>
-                                                        <td>${user.email}</td>
-                                                        <td>${user.fullName}</td>
-                                                        <td>${user.role.name}</td>
+                                                        <th>${product.id}</th>
+                                                        <td>${product.name}</td>
+                                                        <td>${product.price}</td>
+                                                        <td>${product.factory}</td>
                                                         <td>
-                                                            <a href="/admin/user/${user.id}"
+                                                            <a href="/admin/product/${product.id}"
                                                                 class="btn btn-success">View</a>
-                                                            <a href="/admin/user/update/${user.id}"
+                                                            <a href="/admin/product/update/${product.id}"
                                                                 class="btn btn-warning  mx-2">Update</a>
-                                                            <a href="/admin/user/delete/${user.id}"
+                                                            <a href="/admin/product/delete/${product.id}"
                                                                 class="btn btn-danger">Delete</a>
                                                         </td>
                                                     </tr>
 
-                                                </c:forEach> -->
+                                                </c:forEach>
 
                                             </tbody>
                                         </table>
@@ -74,13 +71,15 @@
                                 </div>
 
                             </div>
+                        </div>
                     </main>
                     <jsp:include page="../layout/footer.jsp" />
                 </div>
             </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
                 crossorigin="anonymous"></script>
-            <script src="js/scripts.js"></script>
+            <script src="/js/scripts.js"></script>
+
         </body>
 
         </html>

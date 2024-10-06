@@ -9,8 +9,9 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 
 import java.util.List;
 
@@ -23,15 +24,15 @@ public class User {
     private long id;
 
     @NotNull
-    @Email
+    @Email(message = "Email is not valid", regexp = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")
     private String email;
 
     @NotNull
-    @Size(min = 3)
+    @Min(value = 2, message = "Password phải có tối thiểu 2 kí tự")
     private String password;
 
     @NotNull
-    @Size(min = 2)
+    @Min(value = 3, message = "FullName phải có tối thiểu 3 kí tự")
     private String fullName;
 
     private String address;
