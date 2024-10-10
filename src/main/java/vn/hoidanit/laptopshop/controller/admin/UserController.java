@@ -92,7 +92,7 @@ public class UserController {
             System.out.println(error.getField() + " - " + error.getDefaultMessage());
         }
         if (newUserBindingResult.hasErrors()) {
-            return "/admin/user/create";
+            return "admin/user/create";
         }
         //
 
